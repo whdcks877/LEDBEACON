@@ -127,7 +127,8 @@ void Receiver::BTloop(){
         }
       }
     
-      if(disi_result.length()>=8 && (disi_result.substring((disi_result.length()-8),(disi_result.length()))=="OK+DISCE") || (disi_result.substring((disi_result.length()-9),(disi_result.length()-1))=="OK+DISCE")){
+      if(disi_result.length()>=8 && (disi_result.substring((disi_result.length()-8),(disi_result.length()))=="OK+DISCE") || 
+         (disi_result.substring((disi_result.length()-9),(disi_result.length()-1))=="OK+DISCE")){
         d1=2;
         BTSerial->flush();
         BTSerial->write("AT+DISI?");
